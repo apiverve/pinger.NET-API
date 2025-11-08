@@ -5,7 +5,7 @@ using System.Text;
 namespace APIVerve
 {
     public class DomainandIPPingerQueryOptions {
-public string host { get; set; }
-public integer timeout { get; set; }
+public string Host { get; set; }
+public int Retries { get; set; }
 }
 }
