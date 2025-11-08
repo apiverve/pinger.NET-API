@@ -4,54 +4,55 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("host")]
-    public string host { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("host")]
+        public string Host { get; set; }
 
-    [JsonProperty("numericHost")]
-    public string numericHost { get; set; }
+        [JsonProperty("numericHost")]
+        public string NumericHost { get; set; }
 
-    [JsonProperty("alive")]
-    public bool alive { get; set; }
+        [JsonProperty("alive")]
+        public bool Alive { get; set; }
 
-    [JsonProperty("roundTrips")]
-    public int roundTrips { get; set; }
+        [JsonProperty("roundTrips")]
+        public int RoundTrips { get; set; }
 
-    [JsonProperty("packetLoss")]
-    public int packetLoss { get; set; }
+        [JsonProperty("packetLoss")]
+        public int PacketLoss { get; set; }
 
-    [JsonProperty("minMS")]
-    public double minMS { get; set; }
+        [JsonProperty("minMS")]
+        public double MinMS { get; set; }
 
-    [JsonProperty("avgMS")]
-    public double avgMS { get; set; }
+        [JsonProperty("avgMS")]
+        public double AvgMS { get; set; }
 
-    [JsonProperty("maxMS")]
-    public double maxMS { get; set; }
+        [JsonProperty("maxMS")]
+        public double MaxMS { get; set; }
 
-    [JsonProperty("stdDev")]
-    public double stdDev { get; set; }
+        [JsonProperty("stdDev")]
+        public double StdDev { get; set; }
 
-    [JsonProperty("times")]
-    public double[] times { get; set; }
+        [JsonProperty("times")]
+        public double[] Times { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
